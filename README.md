@@ -12,7 +12,7 @@ rails db:create
 ```
 
 
-# PROJECT_NAME
+# Rent A Car
 
 > Description the project.
 
@@ -46,6 +46,24 @@ Then you can clone the project by typing ```git clone https://github.com/RaoAkif
 - Type ```rails s``` in the root file of the project.
 
 ## Authors
+
+👤 **Andres**
+
+- GitHub: [@raoakif](https://github.com/RaoAkif)
+- Twitter: [@raoakif](https://twitter.com/RaoAkif)
+- LinkedIn: [RaoAkif](https://linkedin.com/in/RaoAkif)
+
+👤 **Fernando**
+
+- GitHub: [@raoakif](https://github.com/RaoAkif)
+- Twitter: [@raoakif](https://twitter.com/RaoAkif)
+- LinkedIn: [RaoAkif](https://linkedin.com/in/RaoAkif)
+
+👤 **Retky**
+
+- GitHub: [@raoakif](https://github.com/RaoAkif)
+- Twitter: [@raoakif](https://twitter.com/RaoAkif)
+- LinkedIn: [RaoAkif](https://linkedin.com/in/RaoAkif)
 
 👤 **RaoAkif**
 
