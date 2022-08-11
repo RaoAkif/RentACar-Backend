@@ -1,6 +1,10 @@
 # Rent A Car
 
-> Description the project.
+> This project is based on an app to rent cars.
+> The main view of the app presents a list of different cars to the user, allowing the user to view the details of each car, rent the car, and see the user's current rents.
+> **The app allows to add or remove cars that are going to show to the users (Only for the Admin pendant)
+
+**[Front-End](https://github.com/RaoAkif/RentACar-Frontend)**
 
 ## Built With
 - Ruby on Rails
@@ -35,21 +39,21 @@ Then you can clone the project by typing ```git clone https://github.com/RaoAkif
 
 👤 **Andres**
 
-- GitHub: [@raoakif](https://github.com/RaoAkif)
-- Twitter: [@raoakif](https://twitter.com/RaoAkif)
-- LinkedIn: [RaoAkif](https://linkedin.com/in/RaoAkif)
+- GitHub: [@andres-condezo](https://github.com/andres-condezo)
+- Twitter: [@andres-condezo](https://twitter.com/andres_condezo)
+- LinkedIn: [andres-condezo](https://www.linkedin.com/in/andres-condezo/)
 
 👤 **Fernando**
 
-- GitHub: [@raoakif](https://github.com/RaoAkif)
-- Twitter: [@raoakif](https://twitter.com/RaoAkif)
-- LinkedIn: [RaoAkif](https://linkedin.com/in/RaoAkif)
+- GitHub: [@fasaldana](https://github.com/fasaldana)
+- Twitter: [@Fernandosal98](https://twitter.com/Fernandosal98)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/fernando-saldana-8bbb89228/)
 
 👤 **Retky**
 
-- GitHub: [@raoakif](https://github.com/RaoAkif)
-- Twitter: [@raoakif](https://twitter.com/RaoAkif)
-- LinkedIn: [RaoAkif](https://linkedin.com/in/RaoAkif)
+- GitHub: [@Retky](https://github.com/Retky "J. Luis Arredondo GitHub")
+- Twitter: [@RetkyFox](https://twitter.com/retkyFox "J. Luis Arredondo Twitter")
+- LinkedIn: [Retky](https://www.linkedin.com/in/Retky "J. Luis Arredondo LinkedIn")
 
 👤 **RaoAkif**
 
@@ -69,9 +73,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+-  [Original design](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) by [Murat Korkmaz](https://www.behance.net/muratk) on Behance.
 
 ## 📝 License
 
