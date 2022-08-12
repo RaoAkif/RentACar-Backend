@@ -1,5 +1,6 @@
 class Api::V1::ReservationsController < ApplicationController
   before_action :set_reservation, only: %i[show update destroy]
+  skip_before_action :verify_authenticity_token
 
   # GET /reservations
   def index
@@ -19,7 +20,7 @@ class Api::V1::ReservationsController < ApplicationController
     @reservation.user_id = params[:user_id]
 
     if @reservation.save
-      render json: @reservation, status: :created, location: @reservation
+      render json: @reservation, status: :created
     else
       render json: @reservation.errors, status: :unprocessable_entity
     end

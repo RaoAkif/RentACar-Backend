@@ -1,5 +1,7 @@
 class Api::V1::UsersController < ApplicationController
   before_action :set_user, only: [:show]
+  skip_before_action :verify_authenticity_token
+
   # GET /users/1
   def show
     render json: @user
@@ -10,7 +12,7 @@ class Api::V1::UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      render json: @user, status: :created, location: @user
+      render json: @user, status: :created
     else
       render json: @user.errors, status: :unprocessable_entity
     end
