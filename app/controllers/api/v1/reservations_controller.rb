@@ -16,7 +16,7 @@ class Api::V1::ReservationsController < ApplicationController
   # POST /reservations
   def create
     @reservation = Reservation.new(reservation_params)
-    @reservation.user_id = @reservation.user.find(params[:user_name]).id
+    @reservation.user_id = params[:user_id]
 
     if @reservation.save
       render json: @reservation, status: :created, location: @reservation
@@ -48,6 +48,6 @@ class Api::V1::ReservationsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def reservation_params
-    params.require(:reservation).permit(:city, :date, :car_id, :user_name)
+    params.require(:reservation).permit(:city, :date, :car_id)
   end
 end

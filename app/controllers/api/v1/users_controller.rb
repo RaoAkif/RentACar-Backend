@@ -16,6 +16,10 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+  def new
+    @user = User.new
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
@@ -25,6 +29,6 @@ class Api::V1::UsersController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def user_params
-    params.require(:user).permit(:name, :email, :password)
+    params.require(:user).permit(:name)
   end
 end
