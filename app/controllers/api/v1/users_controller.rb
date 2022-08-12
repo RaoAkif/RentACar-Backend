@@ -1,5 +1,6 @@
 class Api::V1::UsersController < ApplicationController
-  before_action :set_user, only: [:show]
+    protect_from_forgery with: :null_session
+  before_action :set_user, only: [:show, :create, :new]
   # GET /users/1
   def show
     render json: @user
@@ -8,6 +9,7 @@ class Api::V1::UsersController < ApplicationController
   # POST /users
   def create
     @user = User.new(user_params)
+    redirect_to @user
 
     if @user.save
       render json: @user, status: :created, location: @user

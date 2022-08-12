@@ -1,4 +1,5 @@
 class Api::V1::ReservationsController < ApplicationController
+  protect_from_forgery with: :null_session
   before_action :set_reservation, only: %i[show update destroy]
 
   # GET /reservations
@@ -16,7 +17,6 @@ class Api::V1::ReservationsController < ApplicationController
   # POST /reservations
   def create
     @reservation = Reservation.new(reservation_params)
-    @reservation.user_id = @reservation.user.find(params[:user_name]).id
 
     if @reservation.save
       render json: @reservation, status: :created, location: @reservation
@@ -48,6 +48,6 @@ class Api::V1::ReservationsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def reservation_params
-    params.require(:reservation).permit(:city, :date, :car_id, :user_name)
+    params.require(:reservation).permit(:city, :date, :car_id, :user_id)
   end
 end
