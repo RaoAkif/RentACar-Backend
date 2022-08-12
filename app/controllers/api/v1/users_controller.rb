@@ -16,6 +16,10 @@ class Api::V1::UsersController < ApplicationController
     end
   end
 
+  def new
+    @user = User.new
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
