@@ -58,7 +58,10 @@ class Api::V1::ReservationsController < ApplicationController
 
   # DELETE /reservations/1
   def destroy
+    @response = Reservation.find(params[:id])
     @reservation.destroy
+
+    render json: @response
   end
 
   private
