@@ -2,10 +2,30 @@ class Api::V1::ReservationsController < ApplicationController
   before_action :set_reservation, only: %i[show update destroy]
   skip_before_action :verify_authenticity_token
 
+  def reservation(reservation)
+    {
+      id: reservation.id,
+      car_id: reservation.car_id,
+      user_id: reservation.user_id,
+      city: reservation.city,
+      date: reservation.date,
+      car: {
+        id: reservation.car.id,
+        name: reservation.car.name,
+        model: reservation.car.model,
+        desc: reservation.car.desc,
+        rent: reservation.car.rent,
+        image: reservation.car.image
+      }
+    }
+  end
+
   # GET /reservations
   def index
     @user = User.find(params[:user_id])
-    @reservations = @user.reservations
+    @reservations = @user.reservations.map do |reservation|
+      reservation(reservation)
+    end
     render json: @reservations
   end
 
@@ -20,7 +40,8 @@ class Api::V1::ReservationsController < ApplicationController
     @reservation.user_id = params[:user_id]
 
     if @reservation.save
-      render json: @reservation, status: :created
+      @resrv = reservation(@reservation)
+      render json: @resrv, status: :created
     else
       render json: @reservation.errors, status: :unprocessable_entity
     end
@@ -37,7 +58,10 @@ class Api::V1::ReservationsController < ApplicationController
 
   # DELETE /reservations/1
   def destroy
+    @response = Reservation.find(params[:id])
     @reservation.destroy
+
+    render json: @response
   end
 
   private
