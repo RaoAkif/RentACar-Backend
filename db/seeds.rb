@@ -5,9 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-User.create!(name:  "Example User")
-User.create!(name:  "Example User2")
-User.create!(name:  "Example User3")
+User.create!(name:  "Example-user")
+User.create!(name:  "Example-user2")
+User.create!(name:  "Example-user3")
 Car.create!(name: "Honda", model: "Civic", desc: "This is a Honda Civic", image: "https://www.honda.com/content/dam/honda/na/us/english/images/vehicles/civic/civic-sedan-2019/civic-sedan-2019-exterior-front-left.png", rent: "100.00")
 Car.create!(name: "Honda", model: "Accord", desc: "This is a Honda Accord", image: "https://www.honda.com/content/dam/honda/na/us/english/images/vehicles/accord/accord-sedan-2019/accord-sedan-2019-exterior-front-left.png", rent: "200.00")
 Car.create!(name: "Honda", model: "CR-V", desc: "This is a Honda CR-V", image: "https://www.honda.com/content/dam/honda/na/us/english/images/vehicles/cr-v/cr-v-sedan-2019/cr-v-sedan-2019-exterior-front-left.png", rent: "300.00")

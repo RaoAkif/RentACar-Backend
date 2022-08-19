@@ -2,6 +2,21 @@ class Api::V1::UsersController < ApplicationController
   before_action :set_user, only: [:show]
   skip_before_action :verify_authenticity_token
 
+  # GET /users
+  def index
+    @users = User.all
+    render json: @users
+  end
+
+  def sign_in
+    @user = User.find_by(name: params[:name])
+    if @user
+      render json: @user, status: :ok
+    else
+      render json: { error: 'User not found' }, status: :not_found
+    end
+  end
+
   # GET /users/1
   def show
     render json: @user

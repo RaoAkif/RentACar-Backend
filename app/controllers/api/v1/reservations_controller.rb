@@ -1,4 +1,5 @@
 class Api::V1::ReservationsController < ApplicationController
+  protect_from_forgery with: :null_session
   before_action :set_reservation, only: %i[show update destroy]
   skip_before_action :verify_authenticity_token
 
