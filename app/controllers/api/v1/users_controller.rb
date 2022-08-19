@@ -1,4 +1,5 @@
 class Api::V1::UsersController < ApplicationController
+  before_action :set_user, only: [:show]
   skip_before_action :verify_authenticity_token
 
   # GET /users
