@@ -3,4 +3,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  namespace :api do
+    namespace :v1 do
+      post "/sign_in" => "users#sign_in"
+      resources :users, only: [:index, :show, :create, :new, :destroy] do
+        resources :reservations
+      end
+      resources :cars
+    end
+  end
 end

@@ -1,7 +1,12 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+User.create!(name:  "Akif")
+User.create!(name:  "Retky")
+User.create!(name:  "Fernando")
+User.create!(name:  "Andres")
+Car.create!(name: "BMW", model: "M3", desc: "This is a BWM M3", image: "https://raw.githubusercontent.com/CodeBitChips/Images/main/cars/bmw-m3.png", rent: "200.00")
+Car.create!(name: "Ford", model: "Puma", desc: "This is a BWM M3", image: "https://raw.githubusercontent.com/CodeBitChips/Images/main/cars/ford-puma.png", rent: "200.00")
+Car.create!(name: "Hyundai", model: "Tucson", desc: "This is a BWM M3", image: "https://raw.githubusercontent.com/CodeBitChips/Images/main/cars/hyundai-tucson.png", rent: "200.00")
+Car.create!(name: "Kia", model: "Sportage", desc: "This is a BWM M3", image: "https://raw.githubusercontent.com/CodeBitChips/Images/main/cars/kia-sportage.png", rent: "200.00")
+Reservation.create!(city: "New York", date: Date.parse("2020-01-01"), user_id: 1, car_id: 1)
+Reservation.create!(city: "New York", date: Date.parse("2020-01-01"), user_id: 2, car_id: 2)
+Reservation.create!(city: "New York", date: Date.parse("2020-01-01"), user_id: 3, car_id: 3)
+Reservation.create!(city: "New York", date: Date.parse("2020-01-01"), user_id: 4, car_id: 4)
