@@ -12,7 +12,7 @@ The main view of the app presents a list of different cars to the user, allowing
 - CSS (Front-End)
 - React (Front-End)
 - Redux (Front-End)
-- sqlite3 for the local development
+- Postgresql for the local development
 - Postgresql for the production
 - Heroku for Deployment
 
